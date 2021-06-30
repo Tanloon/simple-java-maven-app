@@ -1,9 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v /mnt/g/Repository:/root/.m2'
-        }
+        label 'master'
     }
     stages {
         stage('Build') {
