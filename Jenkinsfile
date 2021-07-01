@@ -6,9 +6,14 @@ pipeline {
         }
     }
     stages {
+        stage('Init') {
+            steps {
+                sh 'pwd'
+            }
+        }
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'pwd && mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
