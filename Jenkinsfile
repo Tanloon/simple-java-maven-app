@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
+                sh '$HOME'
                 sh 'pwd'
             }
         }
